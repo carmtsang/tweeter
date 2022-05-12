@@ -9,23 +9,23 @@ nav {
   justify-content: space-between;
 }
 
-nav span {
+logo {
   font-family: 'Bungee', sans-serif;
 }
 
-.nav-right span  {
+.nav-right  {
   display: flex;
   align-items: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  flex-direction: column;
 }
 
 .icon {
   color: red;
   display: flex;
-  flex-direction: column;
+  
   align-items: center;
 }
 
 strong {
-  padding: .2em;
+  padding: .1em;
 }
