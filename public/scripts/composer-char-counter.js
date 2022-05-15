@@ -3,8 +3,13 @@ $(document).ready(() => {
 
   const $input = $('#tweet-text');
 
-  $input.on('input', () => {
-    console.log(this)
+  $input.on('input', function() {
+    const $currentInput = $(this).val()
+    console.log($currentInput.length)
+    let $count = Number($('.counter strong').text());
+    
+    $count = $count - $currentInput.length
+    console.log($count)
   })
 
 });
