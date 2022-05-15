@@ -8,8 +8,13 @@ $(document).ready(() => {
     console.log($currentInput.length)
     let $count = Number($('.counter strong').text());
     
-    $count = $count - $currentInput.length
+    if ($currentInput.length + 1) {
+      $count -= 1;
+    } else if ($currentInput.length - 1) {
+      $count +=1
+    }
     console.log($count)
+    $('.counter strong').text($count)
   })
 
 });
