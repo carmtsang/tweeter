@@ -1,24 +1,22 @@
 $(document).ready(() => {
+  console.log('boom')
+
   const $input = $('#tweet-text');
-
+  
   $input.on('input', function() {
-    // currentInput = what is typed into the textbox
-    const $currentInput = $(this).val()
-    let $count = Number($('.counter strong').text());
+    const inputLength = $(this).val().length
+    const $counter = $(this).next().children('.counter');
+   
+    const maxLength = 140;
     
-    // +1 input = -1 count & -1 input = +1 count
-    if ($currentInput.length + 1) {
-      $count -= 1;
-    } else if ($currentInput.length - 1) {
-      $count +=1
-    };
-    // counter red when less than 0
-    if ($count < 0) {
-      $('.counter strong').css('color', 'red');
-    };
+    const remaining = maxLength - inputLength;
 
-    $('.counter strong').text($count);
-  });
+    // counter turns red when negative
+    (remaining < 0) ? $counter.css('color', 'red') : $counter.css('color', 'black');
+  
+    
+    $counter.text(remaining)
+  })
 
 });
 
