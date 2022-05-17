@@ -33,3 +33,32 @@ body {
   align-items: center;
   margin: auto;
 }
+
+article {
+  border: black solid;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+
+
+.tweet-body {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+p {
+  border-bottom: black solid;
+  padding-bottom: 1em;
+}
+
+article header {
+  background-color: #f4f1ec;
+  background-image: none;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+}
