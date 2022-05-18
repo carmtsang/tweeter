@@ -32,17 +32,18 @@ article header {
 
 .handle {
   color: #539987;
+  padding-right: 1em;
 }
 
 .tweet-container footer {
   display: flex;
   justify-content: space-between;
   font-size: medium;
-  padding: 1em 0;
+  padding: 1em;
 }
 
-/* Hover state */
 
+/* Hover state */
 article:hover {
   box-shadow: 4px 6px #539987;
 }
@@ -54,7 +55,5 @@ article:hover .handle {
 .tweet-container i:hover {
   color: #E3C16F;
 }
-
-
 
 /* Hover state end*/
