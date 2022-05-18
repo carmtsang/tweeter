@@ -15,6 +15,7 @@ textarea {
   box-sizing: border-box;
   border: none;
   border-bottom: black solid;
+  resize: none;
 }
 
 .button-counter {
