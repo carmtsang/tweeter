@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(() => {
   console.log('boom');
 
   const $input = $('#tweet-text');
@@ -14,7 +14,7 @@ $(document).ready(() => {
     (remaining < 0) ? $counter.css('color', 'red') : $counter.css('color', 'black');
   
     $counter.text(remaining);
-  })
+  });
 
 });
 
