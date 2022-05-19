@@ -40,25 +40,25 @@ const renderTweets = function(tweets) {
 const createTweetElement = function(tweet) {
 let $tweet = 
 `<article class="tweet-container">
-<header>
-  <div class="user">
-    <img src="https://i.imgur.com/73hZDYK.png">
-    Newton
+  <header>
+    <div class="user">
+      <img src="${data.user.avatars}">
+      ${data.user.name}
+    </div>
+    <p class="handle">${data.user.hande}</p>
+  </header>
+  <div class="tweet-body">
+    <p>${data.content.text}</p>
   </div>
-  <p class="handle">@SirIssac</p>
-</header>
-<div class="tweet-body">
-  <p>What goes up must come down.</p>
-</div>
-<footer>
-  <span>x days ago</span>
-  <div class="tweet-icons">
-    <i class="fa-solid fa-flag"></i>
-    <i class="fa-solid fa-retweet"></i>
-    <i class="fa-solid fa-heart"></i>
-  </div>
-</footer>
-</article> `
+  <footer>
+    <span>${data.created_at}/span>
+    <div class="tweet-icons">
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </footer>
+</article>`
 return $tweet;
 }
 
