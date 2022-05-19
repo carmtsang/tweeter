@@ -4,7 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
 // Fake data taken from initial-tweets.json
 const data = [
   {
@@ -31,35 +30,33 @@ const data = [
   }
 ]
 
-const renderTweets = function(tweets) {
+const renderTweets = tweet => {
 // loops through tweets
 // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
 }
 
-const createTweetElement = function(tweet) {
-let $tweet = 
-`<article class="tweet-container">
-  <header>
-    <div class="user">
-      <img src="${data.user.avatars}">
-      ${data.user.name}
-    </div>
-    <p class="handle">${data.user.hande}</p>
-  </header>
-  <div class="tweet-body">
-    <p>${data.content.text}</p>
-  </div>
-  <footer>
-    <span>${data.created_at}/span>
-    <div class="tweet-icons">
-      <i class="fa-solid fa-flag"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-heart"></i>
-    </div>
-  </footer>
-</article>`
-return $tweet;
+const createTweetElement = tweet => {
+  let $tweet = 
+    `<article>
+      <header>
+        <div class="user">
+          <img src="${tweet.user.avatars}">
+          <span>${tweet.user.name}</span>
+        </div>
+        <p class="handle">${tweet.user.handle}</p>
+      </header>
+      <p class="tweet-body">${tweet.content.text}</p>
+      <footer>
+        <span>${tweet.created_at}</span>
+        <div class="tweet-icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>`
+  return $tweet;
 }
 
 renderTweets(data);

@@ -1,14 +1,18 @@
+section {
+  width: 100%
+}
+
 article {
   border: black solid;
   display: flex;
   flex-direction: column;
   margin-top: 2em;
   padding: 0 .5em;
-  width: 100%;
 }
 
 .tweet-body {
   border-bottom: black solid;
+  padding-bottom: 1em;
 }
 
 article header {
@@ -40,7 +44,7 @@ article header {
   display: flex;
   justify-content: space-between;
   font-size: medium;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
 }
 
 
@@ -53,7 +57,7 @@ article:hover .handle {
   font-weight: 700;
 }
 
-.tweet-container i:hover {
+article i:hover {
   color: #E3C16F;
 }
 
