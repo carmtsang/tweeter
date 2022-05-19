@@ -1,5 +1,5 @@
 section {
-  width: 100%
+  width: 100%;
 }
 
 article {
@@ -40,7 +40,7 @@ article header {
   padding-right: 1em;
 }
 
-.tweet-container footer {
+#tweets-container footer {
   display: flex;
   justify-content: space-between;
   font-size: medium;
