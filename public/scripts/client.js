@@ -6,6 +6,7 @@ $(() => {
     }
   };
   
+  // function to prevent XSS
   const escape = str => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -14,14 +15,18 @@ $(() => {
 
   const createTweetElement = tweet => {
     const content = escape(tweet.content.text);
-    let $tweet =
+    const avatars = escape(tweet.user.avatars);
+    const userName = escape(tweet.user.name);
+    const handle = escape(tweet.user.handle);
+    
+    const $tweet =
       `<article>
         <header>
           <div class="user">
-            <img src="${tweet.user.avatars}">
-            <span>${tweet.user.name}</span>
+            <img src="${avatars}">
+            <span>${userName}</span>
           </div>
-          <p class="handle">${tweet.user.handle}</p>
+          <p class="handle">${handle}</p>
         </header>
         <p class="tweet-body">${content}</p>
         <footer>
@@ -33,6 +38,7 @@ $(() => {
           </div>
         </footer>
       </article>`;
+
     return $tweet;
   };
 
