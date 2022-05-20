@@ -41,13 +41,14 @@ $(() => {
   $('form').submit(function(event) {
     event.preventDefault();
     const $data = $(this).serialize();
-    const $counter = $(this).children('#tweet-text').val().length;
-    if ($counter > 140) {
+    const $length = $(this).children('#tweet-text').val().length;
+    if ($length > 140) {
       alert('Tweet is too long');
-    } else if (!$counter) {
+    } else if (!$length) {
       alert('Please input a tweet')
     } else {
       $.post('/tweets', $data)
+      .then(() =>$(this).trigger('reset') && $('.counter').text(140))
       .then(() => loadTweet());
     }
 
