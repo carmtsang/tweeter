@@ -57,4 +57,10 @@ $(() => {
   };
   
   renderTweets(data);
+
+  $('form').submit(function(event) {
+    event.preventDefault();
+    console.log('button has been clicked')
+  })
+
 });
