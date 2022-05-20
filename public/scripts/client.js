@@ -18,7 +18,7 @@ $(() => {
         </header>
         <p class="tweet-body">${tweet.content.text}</p>
         <footer>
-          <span>${tweet.created_at}</span>
+          <span>${timeago.format(tweet.created_at)}</span>
           <div class="tweet-icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -34,14 +34,15 @@ $(() => {
     .then(tweets => renderTweets(tweets));
   };
 
+  // inital load of the tweets on the page
   loadTweet()
-  
   
   // Submitting tweets
   $('form').submit(function(event) {
     event.preventDefault();
     const $data = $(this).serialize();
-
+    // after posting, load tweet again
     $.post('/tweets', $data)
+    .then(() => loadTweet());
   })
 });
