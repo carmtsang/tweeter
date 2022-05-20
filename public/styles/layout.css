@@ -36,10 +36,14 @@ body {
 
 .error {
   border: 3px solid;
-  margin: 10px auto;
+  margin-bottom: .5em;
   padding: 20px;
 
   width: 100%;
   color: #D8000C;
 	background-color: #FFBABA;
+}
+
+.error i {
+  color: black;
 }

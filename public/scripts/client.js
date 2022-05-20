@@ -1,4 +1,7 @@
 $(() => {
+
+  $(".error").hide();
+
   const renderTweets = tweets => {
     for (const tweet of tweets) {
       let $post = createTweetElement(tweet);
@@ -58,11 +61,14 @@ $(() => {
     const $length = $(this).children('#tweet-text').val().length;
 
     if ($length > 140) {
-      alert('Tweet is too long');
+      $('#error-long').slideDown();
+      $('#error-notext').slideUp()
     } else if (!$length) {
-      alert('Please input a tweet');
+      $('#error-long').slideUp()
+      $('#error-notext').slideDown();
     } else {
       $.post('/tweets', $data)
+        .then(() => $(".error").slideUp())
         .then(() =>$(this).trigger('reset') && $('.counter').text(140))
         .then(() => loadTweet());
     }
