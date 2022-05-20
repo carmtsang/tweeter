@@ -1,5 +1,5 @@
 $(() => {
-
+  // hide error messages
   $(".error").hide();
 
   const renderTweets = tweets => {
@@ -14,14 +14,14 @@ $(() => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = tweet => {
     const content = escape(tweet.content.text);
     const avatars = escape(tweet.user.avatars);
     const userName = escape(tweet.user.name);
     const handle = escape(tweet.user.handle);
-    
+   
     const $tweet =
       `<article>
         <header>
@@ -62,9 +62,10 @@ $(() => {
 
     if ($length > 140) {
       $('#error-long').slideDown();
-      $('#error-notext').slideUp()
+      // if no-text error was there previously, slide it up.
+      $('#error-notext').slideUp();
     } else if (!$length) {
-      $('#error-long').slideUp()
+      $('#error-long').slideUp();
       $('#error-notext').slideDown();
     } else {
       $.post('/tweets', $data)
