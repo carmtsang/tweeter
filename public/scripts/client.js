@@ -60,7 +60,9 @@ $(() => {
 
   $('form').submit(function(event) {
     event.preventDefault();
-    console.log('button has been clicked')
+    console.log($(this).serialize())
+    const $data = $(this).serialize();
+    $.post('/tweets', $data);
   })
 
 });
