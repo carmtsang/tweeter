@@ -50,11 +50,19 @@ body {
 
 #scroll-up {
   padding: 1em;
-  background-color: #539987;
+  background-color: #BDC696;
   border-radius: 50%;
   font-size: 34px;
   position: fixed;
   bottom: 0;
   right: 0;
   margin: 1em;
+}
+
+#scroll-up:hover {
+  background-color: #539987;
+}
+
+#scroll-up:hover i {
+  font-size: 40px;
 }

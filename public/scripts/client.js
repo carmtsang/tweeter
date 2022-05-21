@@ -70,7 +70,7 @@ $(() => {
     } else {
       $.post('/tweets', $data)
         .then(() => $(".error").slideUp())
-        .then(() =>$(this).trigger('reset') && $('.counter').text(140))
+        .then(() => $(this).trigger('reset') && $('.counter').text(140))
         .then(() => loadTweet());
     }
   });
