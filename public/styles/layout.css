@@ -38,6 +38,8 @@ body {
   margin: auto;
 }
 
+/* Error Message styling */
+
 .error {
   border: 3px solid;
   margin-bottom: .5em;
@@ -51,6 +53,8 @@ body {
 .error i {
   color: black;
 }
+
+/* End of error message styling */
 
 /* Scroll up button */
 
@@ -76,7 +80,6 @@ body {
 /* Scroll up button end */
 
 @media only screen and (min-width: 1024px) {
-  
   body {
     display: flex;
   }
@@ -85,7 +88,6 @@ body {
     width: 30%;
     margin: 6rem;
     margin-top: 240px;
-  
   }
 
   .container {
@@ -95,5 +97,4 @@ body {
   #tweets-container, .new-tweet {
     width: 90%
   }
-
 }

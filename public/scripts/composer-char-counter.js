@@ -1,6 +1,4 @@
 $(() => {
-  console.log('boom');
-
   const $input = $('#tweet-text');
   
   $input.on('input', function() {

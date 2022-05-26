@@ -22,27 +22,24 @@ $(() => {
     const userName = escape(tweet.user.name);
     const handle = escape(tweet.user.handle);
    
-    const $tweet =
-      `<article>
-        <header>
-          <div class="user">
-            <img src="${avatars}">
-            <span>${userName}</span>
-          </div>
-          <p class="handle">${handle}</p>
-        </header>
-        <p class="tweet-body">${content}</p>
-        <footer>
-          <span>${timeago.format(tweet.created_at)}</span>
-          <div class="tweet-icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>`;
-
-    return $tweet;
+    return `<article>
+      <header>
+        <div class="user">
+          <img src="${avatars}">
+          <span>${userName}</span>
+        </div>
+        <p class="handle">${handle}</p>
+      </header>
+      <p class="tweet-body">${content}</p>
+      <footer>
+        <span>${timeago.format(tweet.created_at)}</span>
+        <div class="tweet-icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article>`;
   };
 
   const loadTweet = () => {
