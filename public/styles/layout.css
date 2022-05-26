@@ -25,6 +25,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ h2 {
+   text-align: center;
+ }
+
  .container {
   display: flex;
   flex-direction: column;
@@ -78,9 +82,10 @@ body {
   }
 
   #main-header {
+    width: 30%;
     margin: 6rem;
     margin-top: 240px;
-    padding: 0 6rem;
+    padding: 2rem 4rem;
   }
 
   .container {

@@ -15,7 +15,7 @@ article {
   padding-bottom: 1em;
 }
 
-article header {
+#tweets-container header {
   background-color: #f4f1ec;
   background-image: none;
   display: flex;
