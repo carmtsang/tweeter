@@ -77,17 +77,16 @@ body {
     display: flex;
   }
 
-  header {
-    float: left;
-    margin-top: 150px;
-    margin: 2em;
-    padding: 1rem;
-    
+  #main-header {
+    margin: 6rem;
+    margin-top: 240px;
+    padding: 0 6rem;
   }
 
   .container {
-    margin-top: 150px;
+    margin-top: 200px;
   }
+
   #tweets-container, .new-tweet {
     width: 90%
   }
