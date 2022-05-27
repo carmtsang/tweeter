@@ -5,11 +5,12 @@ Tweeter is a simple, single-page Twitter clone.
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
 ## Final Product
-![Tweeter Desktop view](https://github.com/carmtsang/tweeter/blob/master/docs/no%20textbox.png)
-![Desktop view with error message](https://github.com/carmtsang/tweeter/blob/master/docs/error%20message.png)
-![Desktop view with error message](https://github.com/carmtsang/tweeter/blob/master/docs/too%20long%20error.png)
-![Mobile view with tweet composer](https://github.com/carmtsang/tweeter/blob/master/docs/tablet%20view.png)
-![Mobile view without tweet compser](https://github.com/carmtsang/tweeter/blob/master/docs/no%20new%20tweet%20tablet.png)
+![Tweeter Desktop View](https://github.com/carmtsang/tweeter/blob/master/docs/no-textbox.png)
+![Desktop view with error message](https://github.com/carmtsang/tweeter/blob/master/docs/error-message.png)
+![Desktop view with error message](https://github.com/carmtsang/tweeter/blob/master/docs/error-message2.png)
+![Tweeter Mobile view](https://github.com/carmtsang/tweeter/blob/master/docs/mobile-view.png)
+![Mobile view with tweet composer](https://github.com/carmtsang/tweeter/blob/master/docs/mobile-posted-tweets.png)
+![Mobile view without tweet compser](https://github.com/carmtsang/tweeter/blob/master/docs/mobile-no-textbox.png)
 
 ## Getting Started
 
