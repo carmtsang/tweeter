@@ -41,10 +41,10 @@ body {
 /* Error Message styling */
 
 .error {
+  text-align: center;
   border: 3px solid;
   margin-bottom: .5em;
   padding: 20px;
-
   width: 100%;
   color: #D8000C;
 	background-color: #FFBABA;
