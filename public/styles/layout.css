@@ -25,11 +25,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- h2 {
-   text-align: center;
- }
+h2 {
+  text-align: center;
+}
 
- .container {
+.container {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -37,8 +37,6 @@ body {
   align-items: center;
   margin: auto;
 }
-
-/* Error Message styling */
 
 .error {
   text-align: center;
@@ -50,14 +48,7 @@ body {
 	background-color: #FFBABA;
 }
 
-.error i {
-  color: black;
-}
-
-/* End of error message styling */
-
 /* Scroll up button */
-
 #scroll-up {
   padding: 1em;
   background-color: #BDC696;
@@ -76,7 +67,6 @@ body {
 #scroll-up:hover i {
   font-size: 40px;
 }
-
 /* Scroll up button end */
 
 @media only screen and (min-width: 1024px) {
