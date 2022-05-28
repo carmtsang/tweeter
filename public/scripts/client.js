@@ -50,23 +50,21 @@ $(() => {
   // inital load of the tweets on the page
   loadTweet();
   
-
-
   // Submitting tweets
   $('form').submit(function(event) {
     event.preventDefault();
+
     const $data = $(this).serialize();
-  
     const $length = $(this).children('#tweet-text').val().length;
 
     if ($length > 140) {
       $('.error').slideDown('slow', function() {
-        $(this).text('Your tweet is too long! Please keep within the 140 limit.')
-      })
+        $(this).text('Your tweet is too long! Please keep within the 140 limit.');
+      });
     } else if (!$length) {
       $('.error').slideDown('slow', function() {
-        $(this).text("You didn't even tweet! Please enter something...anything!")
-      })
+        $(this).text("You didn't even tweet! Please enter something...anything!");
+      });
     } else {
       $.post('/tweets', $data)
         .then(() => $(".error").slideUp())

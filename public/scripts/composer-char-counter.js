@@ -13,6 +13,5 @@ $(() => {
   
     $counter.text(remaining);
   });
-
 });
 
