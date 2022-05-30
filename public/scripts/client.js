@@ -44,7 +44,8 @@ $(() => {
 
   const loadTweet = () => {
     $.ajax('/tweets', { method: 'GET' })
-      .then(tweets => renderTweets(tweets));
+      .then(tweets => renderTweets(tweets))
+      .catch(error => console.log(error));
   };
 
   // inital load of the tweets on the page
@@ -69,7 +70,8 @@ $(() => {
       $.post('/tweets', $data)
         .then(() => $(".error").slideUp())
         .then(() => $(this).trigger('reset') && $(this).find('.counter').text(140))
-        .then(() => loadTweet());
+        .then(() => loadTweet())
+        .catch(error => console.log(error))
     }
   });
 });
